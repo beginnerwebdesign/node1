@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width , initial-scale=1.0">
+        <title>DOM Events</title>
+    </head>
+    <body>
+        <div align="center">
+            <h1>This is DOM Events</h1>
+            <br>
+            <br>
+            <button onclick="changebg()">CLICK TO CHANGE BACKGROUND</button>
+        </div>
+        <script>
+            function changebg()
+            {
+                var r=Math.floor(Math.random()*256);
+                var g=Math.floor(Math.random()*256);
+                var b=Math.floor(Math.random()*256);
+                var mycolor= "rgb("+r+","+g+","+b+")";
+                document.body.style.backgroundColor=mycolor;
+                
+
+            }
+        </script>
+    </body>
+</html>

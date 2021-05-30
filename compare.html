@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>Comparision</title>
+    </head>
+    <body>
+        <div align="center" id="maincontainer">
+            <h1>This is Encapsulation</h1>
+            <h1 id="play"></h1>
+
+        </div>
+        <script>
+            function Student(firstname,lastname)
+            {
+                this.firstname=firstname || "undefined";
+                this.lastname=lastname || "undefined";
+            }
+            Student.prototype.getfullname=function()
+            {
+                return this.firstname+" "+this.lastname;
+            }
+            function players(firstname,lastname,teamname,level)
+            {
+                Student.call(this,firstname,lastname);
+                this.teamname=teamname || "undefined";
+                this.level=level || "undefined";
+            }
+            players.prototype = new Student();
+            players.prototype.constructer= Student;
+            var player=new players("keerthana","gurram","army",4);
+            alert(player.getfullname());
+            alert(player instanceof players);
+            alert(player instanceof Student);
+        </script>
+    </body>
+</html>

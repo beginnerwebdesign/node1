@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width,initial-scale=1.0">
+        <title>COLOR BOX</title>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" 
+integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+<style>
+    .grid-container{
+        border: 1px black solid;
+        display: grid;
+        grid-template-columns: auto auto auto;
+    }
+    .grid1{
+        
+        border: solid 1px black;
+        height: 150px;
+        margin: 20px;
+        border-radius: 10px;
+        box-shadow: 2px 2px rgb(22, 101, 150);
+
+    }
+    body{
+        margin: 20px;
+        padding: 20px;
+    }
+    
+</style>
+</head>
+<body>
+    <div align="center" style="width: 50%;">
+        <h1>COLOR BOX</h1>
+        <div class="grid-container">
+            <div class="grid1" ></div>
+            <div class="grid1" ></div>
+            <div class="grid1" ></div>
+            <div class="grid1" ></div>
+            <div class="grid1" ></div>
+            <div class="grid1" ></div>
+            <div class="grid1" ></div>
+            <div class="grid1" ></div>
+            <div class="grid1" ></div>
+        </div>
+        <br>
+        <br>
+        <button onclick="changecolor()">CLICK TO CHANGE THE COLOR</button>
+    </div>
+    <script>
+        function changecolor()
+        {
+            
+            var x=document.getElementsByClassName("grid1");
+            for(var i=0;i<x.length;i++)
+            {
+                var r=Math.floor(Math.random()*256);
+                var g=Math.floor(Math.random()*256);
+                var b=Math.floor(Math.random()*256);
+                var mycolor= "rgb("+r+","+g+","+b+")"; 
+                x[i].style.backgroundColor=mycolor; 
+            }
+    
+            
+        }
+    </script>
+
+</body>
+</html>

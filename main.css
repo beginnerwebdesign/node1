@@ -1,0 +1,15 @@
+h4, h1, h2, h3, h5 {
+  color: blue;
+  font-size: 60px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+h4:hover, h1:hover, h2:hover, h3:hover, h5:hover {
+  color: red;
+}
+/*# sourceMappingURL=main.css.map */

@@ -1,0 +1,9 @@
+h4,h1,h2,h3,h5{
+    color: blue;
+    font-size: 60px;
+    display: flex;
+    justify-content: center;
+    &:hover{
+        color: red;
+    }
+}
